@@ -48,14 +48,20 @@ function imprimirProfesiones(persona) {
 
 const MAYORIA_DE_EDAD = 18
 
-function esMayorDeEdad(persona) {
-  return persona.edad >= MAYORIA_DE_EDAD
-}
+const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD
 
-function imprimirSiEsMayorDeEdad(persona) {
-  if (esMayorDeEdad(persona)) {
-    console.log(`${persona.nombre} es mayor de edad`)
-  } else {
-    console.log(`${persona.nombre} es menor de edad`)
-  }
-}
+// function imprimirSiEsMayorDeEdad(persona) {
+//   if (esMayorDeEdad(persona)) {
+//     console.log(`${persona.nombre} es mayor de edad`)
+//   } else {
+//     console.log(`${persona.nombre} es menor de edad`)
+//   }
+// }
+const imprimirSiEsMayorDeEdad = ({edad, nombre}) => edad >= 18 ? console.log(`${nombre} es mayor de edad`) : console.log(`${nombre} es menor de edad`)
+
+const permitirAcceso = persona => !esMayorDeEdad(persona) ? console.log('ACCESO DENEGADO') : console.log("ACCESO ACEPTADO")
+
+imprimirSiEsMayorDeEdad(sacha)
+permitirAcceso(sacha)
+imprimirSiEsMayorDeEdad(juan)
+permitirAcceso(juan)
