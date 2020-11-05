@@ -6,8 +6,6 @@ do {
   contador++
 } while (!llueve())
 
-if (contador === 1) {
-  console.log(`Fui a ver si llovía ${contador} vez`)
-} else {
-  console.log(`Fui a ver si llovía ${contador} veces`)
-}
+contador === 1 ? console.log(`Fui a ver si llovía ${contador} vez`)
+:
+console.log(`Fui a ver si llovía ${contador} veces`)
