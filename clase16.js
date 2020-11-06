@@ -1,4 +1,5 @@
-var signo = prompt('¿Cuál es tu signo?')
+let signo = prompt('¿Cuál es tu signo?').toLocaleLowerCase()
+console.log(signo)
 
 switch (signo) {
   case 'acuario':
