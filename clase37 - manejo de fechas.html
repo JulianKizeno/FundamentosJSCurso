@@ -7,14 +7,18 @@
   <body>
     <script>
       function diasEntreFechas(fecha1, fecha2) {
+        const diasDelAño = 365
+        let totalDias = 0
+        let miEdad = 0
         const unDia = 1000 * 60 * 60 * 24
         const diferencia = Math.abs(fecha1 - fecha2)
-
-        return Math.floor(diferencia / unDia)
+        totalDias = Math.floor(diferencia / unDia)
+        miEdad = Math.floor(totalDias/diasDelAño)
+        return  console.log(`Has vivido ${totalDias} desde que naciste y tienes ${miEdad} años`)
       }
 
       const hoy = new Date()
-      const nacimiento = new Date(1990, 7, 12)
+      const nacimiento = new Date(1991, 2, 6)
     </script>
   </body>
 </html>
